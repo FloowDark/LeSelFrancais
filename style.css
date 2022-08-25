@@ -1,0 +1,165 @@
+:root {
+    --navbar-background-color: rgb(29, 28, 28);
+    --navbar-separator-color:#ececec;
+    --navbar-item-hovered-color:gray;
+    --navbar-icon-color: purple;
+    --navbar-text-color:rgb(231, 225, 225);
+    --navbar-transition-speed: .2s;
+}
+html, body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'got', Courier, monospace;
+}
+@font-face {
+    src: url(fonts/GothamBold.ttf);
+    font-family: got;
+}
+h2 {
+    text-transform: uppercase;
+    text-align: left;
+    color: white;
+    padding-top: 50px;
+    font-size: 1.5em;
+    padding-left: 120px;
+}
+h1{
+    margin: 0;
+    text-align: left;
+    text-decoration: none;
+    padding-top:70px;
+    padding-left: 150px;
+    color: white;
+    font-size: 5em;
+}
+p {
+    vertical-align: baseline;
+    text-decoration: none;
+    color: white;
+    padding-top: 300px;
+    font-size: 25px;
+    line-height: 1.3em;
+    text-align: start;
+    height: 230px;
+    visibility: inherit;
+    padding-left: 150px;
+}
+/* *********************NAVBAR************************** */
+.navbar {
+    width: 5rem;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    background: var(--navbar-background-color);
+    box-shadow: rgba(12, 43, 30, 0.2) 0 4px 14px;
+    transition: width var(--navbar-transition-speed) ease;
+}
+.navbar:hover {
+    width: 12rem;
+}
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-item {
+    width: 100%;
+    border-bottom: solid 1px var(--navbar-separator-color);
+    transition: bacground-color var(--navbar-transition-speed);
+}
+.navbar-item:hover {
+    background-color: var(--navbar-item-hovered-color);
+}
+
+.navbar-item:last-child {
+    margin-top: auto;
+}
+
+.navbar-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 5rem;
+    width: 100%;
+    text-decoration: none;
+}
+
+.navbar-icon {
+    text-align: center;
+    font-size: 1.5rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+    color: var(--navbar-icon-color);
+    transition: var(--navbar-transition-speed);
+}
+
+.navbar-title {
+    color: var(--navbar-text-color);
+    margin-left: 20px;
+}
+
+.navbar:not(:hover) .navbar-title {
+    display: none;
+}
+.logo .navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 1.5rem;
+}
+.navbar:hover .logo .navbar-icon {
+    transform: rotate(180deg);
+}
+/*******icones*******/
+.navbar i {
+    font-size: 30px;
+    margin-left: 1rem;
+    color: purple;
+}
+/* **********************IMAGE PRINCIPALE ********************** */
+main {
+background: url('media/fond\ site.jpg') no-repeat fixed 50% 50%;
+background-size: cover;
+height: 1100px;
+width: 100%;
+}
+/****Img secondaires****/
+/****Responsive****/
+
+@media only screen and (max-width:1024px) {
+    .navbar {
+        top: auto;
+        width: 100%;
+        bottom: 0px;
+    }
+
+    .navbar:hover {
+        width: 100%;
+    }
+    .navbar-menu {
+        flex-direction: row;
+    }
+    .logo {
+        display: none;
+    }
+    main {
+        margin-left: 0;
+        margin-bottom: 5rem;
+    }
+    .navbar:hover .navbar-title {
+        display: none;
+    }
+    .navbar-icon {
+        min-width: auto;
+        margin: 0;
+    }
+    
+    .navbar-link {
+        justify-content: center;
+    }
+}
