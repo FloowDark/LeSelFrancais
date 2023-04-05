@@ -1,0 +1,230 @@
+:root {
+    --navbar-background-color: rgb(29, 28, 28);
+    --navbar-separator-color:#ececec;
+    --navbar-item-hovered-color:gray;
+    --navbar-icon-color: purple;
+    --navbar-text-color:rgb(231, 225, 225);
+    --navbar-transition-speed: .2s;
+}
+html, body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'got', Courier, monospace;
+}
+@font-face {
+    src: url(fonts/GothamBold.ttf);
+    font-family: got;
+}
+/* *********************NAVBAR************************** */
+.navbar {
+    width: 5rem;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    background: var(--navbar-background-color);
+    box-shadow: rgba(12, 43, 30, 0.2) 0 4px 14px;
+    transition: width var(--navbar-transition-speed) ease;
+}
+.navbar:hover {
+    width: 12rem;
+}
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-item {
+    width: 100%;
+    border-bottom: solid 1px var(--navbar-separator-color);
+    transition: bacground-color var(--navbar-transition-speed);
+}
+.navbar-item:hover {
+    background-color: var(--navbar-item-hovered-color);
+}
+
+.navbar-item:last-child {
+    margin-top: 0ex;
+}
+
+.navbar-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 5rem;
+    width: 100%;
+    text-decoration: none;
+}
+
+.navbar-icon {
+    text-align: center;
+    font-size: 1.5rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+    color: var(--navbar-icon-color);
+    transition: var(--navbar-transition-speed);
+}
+
+.navbar-title {
+    color: var(--navbar-text-color);
+    margin-left: 20px;
+}
+
+.navbar:not(:hover) .navbar-title {
+    display: none;
+}
+.logo .navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 1.5rem;
+}
+.navbar:hover .logo .navbar-icon {
+    transform: rotate(180deg);
+}
+/*******icones*******/
+.navbar i {
+    font-size: 30px;
+    margin-left: 1.5rem;
+    color: #9318b2;
+}
+/*titres*/
+h1{
+    margin: 0;
+    text-align: left;
+    text-decoration: none;
+    padding-top:70px;
+    padding-left: 150px;
+    color: rgb(252, 247, 247);
+    font-size: 5em;
+}
+h2 {
+    text-transform: uppercase;
+    text-align: left;
+    color: rgb(245, 241, 241);
+    padding-top: 50px;
+    font-size: 1.5em;
+    padding-left: 120px;
+}
+h4{
+    color: rgb(238, 231, 231);
+}
+/*Texte*/
+.texte {
+    vertical-align: baseline;
+    text-decoration: none;
+    color: white;
+    padding-top: 100px;
+    font-size: 22px;
+    line-height: 1.3em;
+    text-align: start;
+    height: 230px;
+    margin-left: -200px;
+}
+/* **********************IMAGE PRINCIPALE ********************** */
+body{
+    background-image: url(images/fond.jpg);
+    }   
+/****Img secondaires****/
+#imagesite1 {
+    width: 250px;
+    position: absolute;
+    top: 0;
+    right: 0; 
+    border: 0;
+} 
+/****Skab Video***/
+#skabvideo{
+    margin-left: 800px;
+    margin-bottom: 0px;
+}
+
+/* Section principale */
+
+.main{
+    margin: 20px;
+    margin-top: 80px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+  }
+  /* Toutes les cartes */
+  .cards{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .cards .card{
+    margin-right: 20px;
+    cursor:pointer;
+  }
+  .cards .card img{
+    width: 200px;
+  }
+  .cards .card .card-header{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+  }
+  /* Fin de toutes les cartes */
+  /*Cartes boutique*/
+  .cardsboutique{
+    display:flex;
+    flex-wrap:wrap;
+    
+  }
+  .cardsboutique .cardboutique{
+    margin-right: 20px;
+    cursor:pointer;
+  }
+  .cardsboutique .cardboutique img{
+    width: 270px;
+  }
+  .cardsboutique .cardboutique .card-header{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+  }
+  .cardsboutiquel2{
+    display:flex;
+    flex-wrap:wrap;
+    
+  }
+  .cardsboutiquel2 .cardboutiquel2{
+    margin-right: 20px;
+    cursor:pointer;
+  }
+  .cardsboutiquel2 .cardboutiquel2 img{
+    width: 270px;
+  }
+  .cardsboutiquel2 .cardboutiquel2 .card-header{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+  }
+  
+  /* Video de présentation */
+ 
+  /* Fin de la vidéo de présentation */
+  /* Fin de la section principale */
+  /* Pied de page */
+footer {
+    margin-top: 50px;
+    background-color: rgb(29, 28, 28);
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+  }
+.cardsolo {
+  width: auto;
+  margin-left: 10rem;
+  margin-top: 5rem;
+
+}
+
